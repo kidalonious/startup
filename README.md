@@ -10,6 +10,7 @@ I love creative writing, but I almost never have time for it anymore. That is, I
 - Viewing what other users have written using the site
 - Selecting whether to write based on a prompt or free-write
 - Time related update from the server to change to a new prompt every day
+- Being able to submit what you have written
 
 ### Technologies
 - __HTML__: Using correct HTML for application. Four pages: one for login, viewing previously written projects in a profile, viewing what others have submitted in a feed, and one to write and submit
