@@ -25,6 +25,6 @@ I love creative writing, but I almost never have time for it anymore. That is, I
 - __React__: Port application to use the React framework
 
 ### Diagram
-![Diagram Picture 1] (./pictures/diagram1.PNG)
-![Diagram Picture 2] (./pictures/diagram2.PNG)
-![Diagram Picture 3] (./pictures/diagram3.PNG)
+![Diagram Picture 1] (/pictures/diagram1.PNG)
+![Diagram Picture 2] (/pictures/diagram2.PNG)
+![Diagram Picture 3] (/pictures/diagram3.PNG)
