@@ -23,3 +23,8 @@ I love creative writing, but I almost never have time for it anymore. That is, I
 - __DB/Login__: Store users, and submissions in database. Register and login users. Credentials securely stored in database. Can't submit or view feed unless authenticated.
 - __WebSocket__: As users make submissions, make them viewable to other users on the feed and to themselves on their profiles
 - __React__: Port application to use the React framework
+
+### Diagram
+![Diagram Picture 1] ./pictures/diagram1.PNG
+![Diagram Picture 2] ./pictures/diagram2.PNG
+![Diagram Picture 3] ./pictures/diagram3.PNG
