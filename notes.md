@@ -8,4 +8,4 @@
     - "git push" puts those commited changes on GitHub for everybody to see and use.
 
 ### AWS EC2
-- ssh -i [key pair file] ubuntu@3.93.197.193
+-  command to enter server: ssh -i ~/OneDrive/Desktop/cs260/keys/promptrkey.pem ubuntu@3.220.84.2
