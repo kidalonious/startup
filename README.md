@@ -12,6 +12,12 @@ I love creative writing, but I almost never have time for it anymore. That is, I
 - Time related update from the server to change to a new prompt every day
 - Being able to submit what you have written
 
+### HTML Deliverable
+- Added the html files to structure the basics of the page.
+- Write page exists for a user to write based on a prompt
+- Read page exists for a user to read other user's writings for the day
+- Home page exists for a user to read their own work that they've written using Promptr 
+
 ### Technologies
 - __HTML__: Using correct HTML for application. Four pages: one for login, viewing previously written projects in a profile, viewing what others have submitted in a feed, and one to write and submit
 - __CSS__: Dynamic sizing, good whitespace, and general color theme
