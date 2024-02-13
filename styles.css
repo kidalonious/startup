@@ -1,6 +1,18 @@
+body {
+    overflow-y: auto;
+}
+
+
 .base {
     text-align: center;
-    background-color: #333
+    background-color: #444
+}
+
+header {
+    background-color: burlywood;
+    position: fixed;
+    width: 100%;
+    padding: 2px;
 }
 
 a {
@@ -8,13 +20,8 @@ a {
 }
 
 a:hover {
-    font-style: bold;
-    color: cadetblue;
-    font-size: large;
-}
-
-header {
-    background-color: rgb(166, 145, 116);
+    font-style: italic;
+    color: rgb(12, 97, 100);
 }
 
 nav {
@@ -22,9 +29,11 @@ nav {
 }
 
 main {
+    padding: 10px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    align-self: center;
 }
 
 table {
@@ -47,13 +56,21 @@ th {
     background-color: #777;
 }
 
+td {
+    background-color: #888;
+}
+
 h4, h5 {
     margin: 0;
 }
 
 main > h4 {
+    margin-top: 3.8%;
     flex-basis: 100%;
     width: 100%;
     margin-bottom: 10px;
 }
 
+button, input, textarea {
+    background-color: burlywood;
+}
