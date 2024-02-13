@@ -6,6 +6,10 @@ body {
     text-align: center;
 }
 
+nav {
+    text-align: left;
+}
+
 main {
     display: flex;
     flex-wrap: wrap;
