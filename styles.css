@@ -5,3 +5,40 @@ body {
 .base {
     text-align: center;
 }
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+table {
+    align-items: baseline;
+    border-collapse: collapse;
+    width: 32%;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    flex: none;
+    max-height: 200px;
+    min-width: none;
+}
+
+th, td {
+    padding: 10px;
+}
+
+th {
+    background-color: #f0f0f0;
+}
+
+h4, h5 {
+    margin: 0;
+}
+
+main > h4 {
+    flex-basis: 100%;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
