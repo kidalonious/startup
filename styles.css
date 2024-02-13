@@ -3,6 +3,20 @@
     background-color: #333
 }
 
+a {
+    color: black;
+}
+
+a:hover {
+    font-style: bold;
+    color: cadetblue;
+    font-size: large;
+}
+
+header {
+    background-color: rgb(166, 145, 116);
+}
+
 nav {
     text-align: left;
 }
@@ -15,14 +29,14 @@ main {
 
 table {
     align-items: baseline;
-    border-collapse: collapse;
     width: 32%;
     margin-right: 10px;
     margin-left: 10px;
     margin-bottom: 10px;
     flex: none;
-    max-height: 200px;
     min-width: none;
+    border-color: #000;
+    border-width: 3px;
 }
 
 th, td {
@@ -30,7 +44,7 @@ th, td {
 }
 
 th {
-    background-color: #f0f0f0;
+    background-color: #777;
 }
 
 h4, h5 {
