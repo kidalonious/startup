@@ -5,15 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Promptr</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="index.css">
 </head>
 <body class="base">
+    <div class="main-box">
     <h1>Welcome to Promptr</h1>
     <h3>Log in to <a href="home.html">continue:</a></h3>
     <form action="home.html" method="post">
         <ul>
             <input type="text" id="username" name="varUsername" placeholder="username" required/><br>
             <input type="password" id="password" name="varPassword" placeholder="password" required/>
-            <button type="submit" id="submitLogin">Submit</button>
+            <button type="submit" id="submitLogin" formaction="home.html">Submit</button>
+        </ul>
     <h4>For now, just click the link on "continue" to see the rest</h4>
+    </div>
 </body>
 </html>
