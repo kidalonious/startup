@@ -1,9 +1,10 @@
 .main-box {
     margin-top: 10%;
-    border: 1px black;
-    text-align: center;
+    border: 3px solid black;
+    /*text-align: center;*/
     height: fit-content;
     background-color: burlywood;
     width: fit-content;
     margin-left: 33%;
+    border-collapse: collapse;
 }
