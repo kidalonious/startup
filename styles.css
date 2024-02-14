@@ -72,6 +72,6 @@ main > h4 {
     margin-bottom: 10px;
 }
 
-button, input, textarea {
+button, input {
     background-color: burlywood;
 }

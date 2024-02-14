@@ -1,4 +1,12 @@
 table {
     margin-top: 10%;
-    margin-left: 33%;
+    margin-left: 25%;
+    border: 1;
+}
+
+textarea {
+    background-color: burlywood;
+    resize: none;
+    height: 100%;
+    width: 750px;
 }
