@@ -2,9 +2,8 @@
     margin-top: 10%;
     border: 3px solid black;
     /*text-align: center;*/
-    height: fit-content;
     background-color: burlywood;
-    width: fit-content;
-    margin-left: 33%;
+    width: 50%;
+    margin-left: 25%;
     border-collapse: collapse;
 }
