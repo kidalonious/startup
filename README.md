@@ -12,6 +12,14 @@ I love creative writing, but I almost never have time for it anymore. That is, I
 - Time related update from the server to change to a new prompt every day
 - Being able to submit what you have written
 
+### CSS Deliverable
+- Changed the color theme to be a dark grey with burlywood accents
+- Centered everything
+- Made the html tables look good, and fit them to be three across. Also made them flex fit
+- Made the pages scrollable
+- On the write page I made the textarea larger and made it so it couldn't be resized
+- Fixed the header and footer positions
+
 ### HTML Deliverable
 - Added the html files to structure the basics of the page.
 - Write page exists for a user to write based on a prompt
