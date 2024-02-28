@@ -1,9 +1,3 @@
-function login() {
-    const nameEl = document.querySelector("#name");
-    localStorage.setItem("userName", nameEl.value);
-    window.location.href = "index.html";
-  }
-
   function changeText() {
     var header = document.querySelector('h4');
     var button = document.getElementById('Prompt options');
