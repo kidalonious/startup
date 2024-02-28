@@ -19,6 +19,8 @@ function login() {
 function login() {
   var username = document.getElementById('username').value;
   var password = document.getElementById('password').value;
+  //Need to check user validity against the database here
   sessionStorage.setItem('username', username);
   sessionStorage.setItem('loggedIn', 'true');
+  window.location.href = 'home.html';
 }
