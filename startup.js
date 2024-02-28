@@ -16,3 +16,9 @@ function login() {
         button.textContent = "Switch to Free Write";
     }
 }
+function login() {
+  var username = document.getElementById('username').value;
+  var password = document.getElementById('password').value;
+  sessionStorage.setItem('username', username);
+  sessionStorage.setItem('loggedIn', 'true');
+}
