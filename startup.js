@@ -19,7 +19,12 @@ function login() {
 function login() {
   var username = document.getElementById('username').value;
   var password = document.getElementById('password').value;
-  //Need to check user validity against the database here
+  //Make sure username and password aren't empty
+  if (username.trim() === '' || password.trim() === '') {
+    alert('Username and password are required.');
+    return;
+  }
+  //TODO: Need to check user validity against the database here
   sessionStorage.setItem('username', username);
   sessionStorage.setItem('loggedIn', 'true');
   window.location.href = 'home.html';
