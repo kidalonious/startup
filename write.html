@@ -41,12 +41,12 @@
             </tr>
             <tr>
                 <td colspan="2">
-                    <textarea height="250px" cols="65" rows="5" placeholder="user input goes into here. JavaScript will make it so I can click the button above and it will make the prompt disappear. The button below will submit the writing into the database."></textarea>
+                    <textarea id="userText" height="250px" cols="65" rows="5" placeholder="user input goes into here. JavaScript will make it so I can click the button above and it will make the prompt disappear. The button below will submit the writing into the database."></textarea>
                 </td>
             </tr>
             <tr height="60px">
-                <td align="right">
-                    <button type="submit" id="submitWriting">Submit</button>
+                <td>
+                    <button onclick="submitWrite()">Submit</button>
                 </td>
             </tr>
         </table>
