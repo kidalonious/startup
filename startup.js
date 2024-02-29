@@ -1,4 +1,9 @@
-  function changeText() {
+var registeredUsers = [
+  { username: 'user1', password: 'password1' },
+  { username: 'user2', password: 'password2' }
+];
+
+function changeText() {
     var header = document.querySelector('h4');
     var button = document.getElementById('Prompt options');
 
@@ -10,18 +15,34 @@
         button.textContent = "Switch to Free Write";
     }
 }
+
+function register(username, password) {
+  registeredUsers.push({ username:username, password:password })
+}
 function login() {
   var username = document.getElementById('username').value;
   var password = document.getElementById('password').value;
-  //Make sure username and password aren't empty
-  if (username.trim() === '' || password.trim() === '') {
-    alert('Username and password are required.');
-    return;
+  
+  // Check if username and password are valid against registered users
+  var isValidUser = registeredUsers.some(function(user) {
+      return user.username === username && user.password === password;
+  });
+
+  if (isValidUser) {
+      sessionStorage.setItem('username', username);
+      sessionStorage.setItem('loggedIn', 'true');
+      window.location.href = 'home.html'; // Redirect to home page
+  } else {
+      // Prompt user to register if not found
+      var registerNew = confirm('Username and password not found. Do you want to register?');
+      if (registerNew) {
+          // You can implement the registration logic here
+          alert('You have been registered with username: ' + username + ' and password: ' + password);
+          register(username, password)
+      } else {
+          alert('Please Enter a Valid Username and Password');
+      }
   }
-  //TODO: Need to check user validity against the database here
-  sessionStorage.setItem('username', username);
-  sessionStorage.setItem('loggedIn', 'true');
-  window.location.href = 'home.html';
 }
 
 function submitWrite() {
