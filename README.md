@@ -12,6 +12,12 @@ I love creative writing, but I almost never have time for it anymore. That is, I
 - Time related update from the server to change to a new prompt every day
 - Being able to submit what you have written
 
+### JavaScript Deliverable
+- Implemented the functionality of the buttons
+- You can now register a username and password to use to login with
+- You can choose whether to write based on a prompt or to use the "Free Write" option
+- You can submit whatever you wrote in the write page
+
 ### CSS Deliverable
 - Changed the color theme to be a dark grey with burlywood accents
 - Centered everything
