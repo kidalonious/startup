@@ -39,6 +39,7 @@ function login() {
           // You can implement the registration logic here
           alert('You have been registered with username: ' + username + ' and password: ' + password);
           register(username, password)
+          login()
       } else {
           alert('Please Enter a Valid Username and Password');
       }
