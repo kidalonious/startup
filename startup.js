@@ -61,3 +61,39 @@ function submitWrite() {
   }
 }
 
+function fetchDataFromDatabase() {
+    // Dummy data representing fetched data from the database
+    var userData = [
+        { user: "User1", prompt: "Prompt 1", date: "2/5/2024" },
+        { user: "User1", prompt: "Prompt 2", date: "2/4/2024" },
+        { user: "User2", prompt: "Prompt 3", date: "2/5/2024" },
+        { user: "User2", prompt: "Prompt 4", date: "2/4/2024" }
+    ];
+
+    // Group data by user
+    var groupedData = {};
+    userData.forEach(function(data) {
+        if (!groupedData[data.user]) {
+            groupedData[data.user] = [];
+        }
+        groupedData[data.user].push(data);
+    });
+
+    // Create tables for each user
+    Object.keys(groupedData).forEach(function(user) {
+        var userTable = document.createElement('table');
+        userTable.setAttribute('border', '1');
+        userTable.setAttribute('width', '500px');
+
+        var userTableHTML = '<tr><th colspan="2"><h4>Prompts related to Submission</h4><h4>' + user + '</h4></th></tr>';
+
+        groupedData[user].forEach(function(data) {
+            userTableHTML += '<tr><td colspan="2"><b>' + data.prompt + '</b> - ' + data.date + '</td></tr>';
+        });
+
+        userTable.innerHTML = userTableHTML;
+
+        document.getElementById('tablesContainer').appendChild(userTable);
+    });
+}
+
