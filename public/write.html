@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promptr - Write</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="write.css">
+    <script src="startup.js"></script>
+</head>
+<body class="base">
+    <header>
+        <nav>
+            <a class="special-anchor">Promptr</a>            
+            <a href="home.html" class="basic-anchor">
+                Home
+            </a>
+            |
+            <a href="write.html" class="basic-anchor">
+                Write
+            </a>
+            |
+            <a href="read.html" class="basic-anchor">
+            Read
+            </a>
+            |
+            <a href="https://github.com/kidalonious/startup" target="_blank" class="basic-anchor"> 
+                GitHub
+            </a>
+            | Grant Alston
+        </nav>
+        <img src="https://www.freebiefindingmom.com/wp-content/uploads/2021/07/free-printable-royal-fancy-cursive-letters-cursive-capital-P.jpg" alt="Promptr Logo">
+    </header>
+    <main>
+        <table border="1" height="400px">
+            <tr height ="80px">
+                <th colspan="2">
+                    <h4  align="left">The prompt for the day will go here (third party call to writing prompts)</h4>
+                    <button type="menu" id="Prompt options" onclick="changeText()">Switch to Free Write</button> 
+                </th>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <textarea id="userText" height="250px" cols="65" rows="5" placeholder="user input goes into here. JavaScript will make it so I can click the button above and it will make the prompt disappear. The button below will submit the writing into the database."></textarea>
+                </td>
+            </tr>
+            <tr height="60px">
+                <td>
+                    <button onclick="submitWrite()">Submit</button>
+                </td>
+            </tr>
+        </table>
+    </main>
+    <footer>
+        Grant Alston | <a href="https://github.com/kidalonious/startup" target="_blank" class="basic-anchor">GitHub</a>
+    </footer>
+</body>
+</html>
