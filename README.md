@@ -12,6 +12,12 @@ I love creative writing, but I almost never have time for it anymore. That is, I
 - Time related update from the server to change to a new prompt every day
 - Being able to submit what you have written
 
+### Service Deliverable
+- Relevant changes can be observed on the "write" page of the website
+- Added Express and Node capabilities to the website
+- Re-implemented my submit function using HTTP Endpoints
+- Put a third party call similar to the Simon one that generates a quote. This is displayed below the box on the "Write" page
+
 ### JavaScript Deliverable
 - Implemented the functionality of the buttons
 - You can now register a username and password to use to login with
