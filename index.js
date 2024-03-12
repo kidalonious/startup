@@ -15,7 +15,10 @@ const apiRouter = express.Router();
 app.use(`/api`, apiRouter);
 
 //TODO: endpoints
-
+apiRouter.post('/submission', (req, res) => {
+  submissions = updateScores(req.body, submission);
+  res.send(submission);
+});
 
 // Return the application's default page if the path is unknown
 app.use((_req, res) => {

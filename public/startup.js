@@ -46,20 +46,41 @@ function login() {
   }
 }
 
-function submitWrite() {
-  var userText = document.getElementById('userText').value.trim();
-  if (userText === '') {
+  
+  // Modify the submitWrite function to send user text to the server
+  function submitWrite() {
+    var userText = document.getElementById('userText').value.trim();
+    if (userText === '') {
       alert('Please enter some text before submitting.');
       return;
-  } else {
+    } else {
       var confirmSubmit = confirm('Are you sure you want to submit this text?');
       if (confirmSubmit) {
-          sessionStorage.setItem('submittedText', userText);
-          document.getElementById('userText').value = '';
-          alert('Your writing has been submitted successfully!');
+        // Send the user's text to the server
+        fetch('/submission', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ text: userText }),
+        })
+        .then(response => {
+          if (response.ok) {
+            sessionStorage.setItem('submittedText', userText);
+            document.getElementById('userText').value = '';
+            alert('Your writing has been submitted successfully!');
+          } else {
+            throw new Error('Failed to submit the text.');
+          }
+        })
+        .catch(error => {
+          console.error('Error:', error);
+          alert('An error occurred while submitting your writing.');
+        });
       }
+    }
   }
-}
+  
 async function displayQuote() {
     await fetch('https://api.quotable.io/random')
       .then((response) => response.json())
