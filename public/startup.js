@@ -11,7 +11,7 @@ function changeText() {
         header.textContent = "Free Write";
         button.textContent = "Switch to Prompt";
     } else {
-        header.textContent = "The prompt for the day will go here (third party call to writing prompts)";
+        header.textContent = "The prompt for the day will go here (Database Data)";
         button.textContent = "Switch to Free Write";
     }
 }
