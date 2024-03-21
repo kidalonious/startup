@@ -6,7 +6,7 @@
     <title>Promptr</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="stylesheet" type="text/css" href="index.css">
-    <script src="startup.js"></script>
+    <script src="login.js"></script>
 </head>
 <body class="base">
     <div class="main-box">
@@ -16,7 +16,8 @@
     <ul>
         <input type="text" id="username" name="varUsername" placeholder="username" required/><br>
         <input type="password" id="password" name="varPassword" placeholder="password" required/><br>
-        <button type="submit" id="submitLogin" onclick="login()">Submit</button>
+        <button type="button" class="btn btn-primary" onclick="loginUser()">Login</button>
+          <button type="button" class="btn btn-primary" onclick="createUser()">Create</button>
     </ul>
     </div>
     <footer>
