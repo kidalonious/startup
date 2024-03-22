@@ -1,5 +1,5 @@
 const cookieParser = require('cookie-parser');
-const bcrypt = require('bcrypt');
+//const bcrypt = require('bcrypt');
 const express = require('express');
 const app = express();
 const DB = require('./database.js');
@@ -44,12 +44,18 @@ apiRouter.post('/auth/create', async (req, res) => {
 // GetAuth token for the provided credentials
 apiRouter.post('/auth/login', async (req, res) => {
   const user = await DB.getUser(req.body.email);
+  console.log("Password received for comparison:", req.body.password);
+  console.log("Hashed Password from Database:", user.password);
+
   if (user) {
-    if (await bcrypt.compare(req.body.password, user.password)) {
+    //if (await bcrypt.compare(req.body.password, user.password)) {
+      console.log("Password received for comparison:", req.body.password);
+      console.log("Hashed Password from Database:", user.password);
+
       setAuthCookie(res, user.token);
-      res.send({ id: user._id });
+      res.redirect('/home.html')
       return;
-    }
+    //}
   }
   res.status(401).send({ msg: 'Unauthorized' });
 });
