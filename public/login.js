@@ -52,10 +52,9 @@
     }).then(() => (window.location.href = '/'));
   }
   
-  async function getUser(email) {
-    let scores = [];
+  async function getUser(userName) {
     // See if we have a user with the given email.
-    const response = await fetch(`/api/user/${email}`);
+    const response = await fetch(`/api/user/${userName}`);
     if (response.status === 200) {
       return response.json();
     }

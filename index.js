@@ -1,10 +1,10 @@
 const cookieParser = require('cookie-parser');
-//const bcrypt = require('bcrypt');
+const bcrypt = require('bcrypt');
 const express = require('express');
 const app = express();
 const DB = require('./database.js');
 
-const authCookieName = 'token';
+const authCookieName = 'authToken';
 
 // The service port may be set on the command line
 const port = process.argv.length > 2 ? process.argv[2] : 3000;
@@ -33,7 +33,7 @@ apiRouter.post('/auth/create', async (req, res) => {
     const user = await DB.createUser(req.body.email, req.body.password);
 
     // Set the cookie
-    setAuthCookie(res, user.token);
+    setAuthCookie(res, user.authToken);
 
     res.send({
       id: user._id,
@@ -44,18 +44,12 @@ apiRouter.post('/auth/create', async (req, res) => {
 // GetAuth token for the provided credentials
 apiRouter.post('/auth/login', async (req, res) => {
   const user = await DB.getUser(req.body.email);
-  console.log("Password received for comparison:", req.body.password);
-  console.log("Hashed Password from Database:", user.password);
-
   if (user) {
-    //if (await bcrypt.compare(req.body.password, user.password)) {
-      console.log("Password received for comparison:", req.body.password);
-      console.log("Hashed Password from Database:", user.password);
-
-      setAuthCookie(res, user.token);
-      res.redirect('/home.html')
+    if (await bcrypt.compare(req.body.password, user.password)) {
+      setAuthCookie(res, user.authToken);
+      res.redirect('/home.html');
       return;
-    //}
+    }
   }
   res.status(401).send({ msg: 'Unauthorized' });
 });
@@ -70,8 +64,8 @@ apiRouter.delete('/auth/logout', (_req, res) => {
 apiRouter.get('/user/:email', async (req, res) => {
   const user = await DB.getUser(req.params.email);
   if (user) {
-    const token = req?.cookies.token;
-    res.send({ email: user.email, authenticated: token === user.token });
+    const token = req?.cookies.authToken;
+    res.send({ userName: user.userName, authenticated: authToken === user.authToken });
     return;
   }
   res.status(404).send({ msg: 'Unknown' });
