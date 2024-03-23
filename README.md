@@ -12,6 +12,11 @@ I love creative writing, but I almost never have time for it anymore. That is, I
 - Time related update from the server to change to a new prompt every day
 - Being able to submit what you have written
 
+### Login Deliverable
+- MongoDB is connected to the site
+- Functionality for logging in existing users
+- Functionality for creating new users
+
 ### Service Deliverable
 - Relevant changes can be observed on the "write" page of the website
 - Added Express and Node capabilities to the website
