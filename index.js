@@ -27,10 +27,12 @@ app.use(`/api`, apiRouter);
 
 // CreateAuth token for a new user
 apiRouter.post('/auth/create', async (req, res) => {
-  if (await DB.getUser(req.body.email)) {
+  if (await DB.getUser(req.body.userName)) {
     res.status(409).send({ msg: 'Existing user' });
   } else {
-    const user = await DB.createUser(req.body.email, req.body.password);
+    // Hash the password before storing it in the database
+    const hashedPassword = await bcrypt.hash(req.body.password, 10); // 10 is the saltRounds value
+    const user = await DB.createUser(req.body.userName, hashedPassword);
 
     // Set the cookie
     setAuthCookie(res, user.authToken);
@@ -43,8 +45,10 @@ apiRouter.post('/auth/create', async (req, res) => {
 
 // GetAuth token for the provided credentials
 apiRouter.post('/auth/login', async (req, res) => {
-  const user = await DB.getUser(req.body.email);
+  console.log(req.body.userName)
+  const user = await DB.getUser(req.body.userName);
   if (user) {
+    // Compare the hashed password from the database with the provided password
     if (await bcrypt.compare(req.body.password, user.password)) {
       setAuthCookie(res, user.authToken);
       res.redirect('/home.html');
@@ -61,8 +65,8 @@ apiRouter.delete('/auth/logout', (_req, res) => {
 });
 
 // GetUser returns information about a user
-apiRouter.get('/user/:email', async (req, res) => {
-  const user = await DB.getUser(req.params.email);
+apiRouter.get('/user/:userName', async (req, res) => {
+  const user = await DB.getUser(req.params.userName);
   if (user) {
     const token = req?.cookies.authToken;
     res.send({ userName: user.userName, authenticated: authToken === user.authToken });

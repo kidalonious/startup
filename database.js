@@ -1,5 +1,5 @@
 const { MongoClient } = require('mongodb');
-//const bcrypt = require('bcrypt');
+const bcrypt = require('bcrypt');
 const uuid = require('uuid');
 const config = require('./dbConfig.json');
 
@@ -28,7 +28,7 @@ function getUserByToken(token) {
 
 async function createUser(userName, password) {
   // Hash the password before we insert it into the database
-  //const passwordHash = await bcrypt.hash(password, 10);
+  const passwordHash = await bcrypt.hash(password, 10);
 
   const user = {
     userName: userName,

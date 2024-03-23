@@ -14,9 +14,9 @@
     <h4>If you are new you may check out the website by using username: user1, and password: password1</h4><br>
     <h4>If you want to create an account, just type in the username and password you want to use</h4>
     <ul>
-        <input type="text" id="username" name="varUsername" placeholder="username" required/><br>
+        <input type="text" id="userName" name="varUsername" placeholder="username" required/><br>
         <input type="password" id="password" name="varPassword" placeholder="password" required/><br>
-        <button type="button" class="btn btn-primary" onclick="loginUser()">Login</button>
+        <button type="button" class="btn btn-primary" onclick="loginOrCreate('/auth/login')">Login</button>
           <button type="button" class="btn btn-primary" onclick="createUser()">Create</button>
     </ul>
     </div>
